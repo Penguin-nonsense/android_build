@@ -3612,21 +3612,6 @@ class BlockDifference(object):
                 new_data_name=new_data_name, code=code))
     script.AppendExtra(script.WordWrap(call))
 
-    call = ('delete_recursive("/data/dalvik-cache");')
-    script.AppendExtra(script.WordWrap(call))
-
-    call = ('delete_recursive("/data/cache");')
-    script.AppendExtra(script.WordWrap(call))
-
-    call = ('delete_recursive("/data/system/package_cache");')
-    script.AppendExtra(script.WordWrap(call))
-
-    call = ('delete_recursive("/data/resource-cache");')
-    script.AppendExtra(script.WordWrap(call))
-
-    call = ('delete_recursive("/data/property/persistent_properties");')
-    script.AppendExtra(script.WordWrap(call))
-
   def _HashBlocks(self, source, ranges):  # pylint: disable=no-self-use
     data = source.ReadRangeSet(ranges)
     ctx = sha1()
